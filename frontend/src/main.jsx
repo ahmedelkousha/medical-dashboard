@@ -2,6 +2,7 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import { AuthProvider } from "./context/AuthProvider";
+import Home from "./pages/Home";
 import Login from "./pages/auth/Login";
 import PatientDashboard from "./pages/patient/Dashboard";
 import PatientAppointments from "./pages/patient/Appointments";
@@ -23,10 +24,11 @@ createRoot(document.getElementById("root")).render(
   // <AuthProvider>
     <BrowserRouter>
       <Routes>
-        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Home />} />
+        {/* <Route path="/login" element={<Login />} /> */}
         {/* <Route element={<ProtectedRoute />}> */}
           {/* <Route element={<PatientRoute />}> */}
-            <Route path="/" element={<PatientDashboard />} />
+            {/* <Route path="/" element={<PatientDashboard />} /> */}
             <Route path="/patient" element={<PatientDashboard />} />
             <Route path="/patient/appointments" element={<PatientAppointments />} />
             <Route path="/patient/doctors" element={<PatientDoctors />} />
