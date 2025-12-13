@@ -1,7 +1,7 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { AuthProvider } from "./context/AuthProvider";
+// import { AuthProvider } from "./context/AuthProvider";
 import Login from "./pages/auth/Login";
 import PatientDashboard from "./pages/patient/Dashboard";
 import PatientAppointments from "./pages/patient/Appointments";
@@ -20,7 +20,7 @@ import AdminAppointments from "./pages/admin/Appointments";
 import "./styles/globals.css";
 
 createRoot(document.getElementById("root")).render(
-  <AuthProvider>
+  // <AuthProvider>
     <BrowserRouter>
       <Routes>
         <Route path="/login" element={<Login />} />
@@ -48,5 +48,5 @@ createRoot(document.getElementById("root")).render(
         {/* <Route path="*" element={<Login/>} /> */}
       </Routes>
     </BrowserRouter>
-  </AuthProvider>
+  // </AuthProvider>
 );
