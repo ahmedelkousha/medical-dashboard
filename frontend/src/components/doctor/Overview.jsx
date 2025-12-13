@@ -23,7 +23,7 @@ function Overview() {
             <Sider
                 collapsible
                 collapsed={collapsed}
-                style={{ background:"white" }}
+                style={{ background: "white" }}
                 onCollapse={(value) => setCollapsed(value)}
             >
                 <div
@@ -45,10 +45,12 @@ function Overview() {
                         }}
                     />
                 </div>
-                <Menu theme="light"
+                <Menu
+                    className="custom-menu"
+                    theme="light"
                     selectedKeys={[selectedKey]}
                     mode="inline"
-                    onClick={(e)=>setSelectedKey(e.key)}
+                    onClick={(e) => setSelectedKey(e.key)}
                 >
                     <Menu.Item key="1" icon={<AppstoreOutlined />}>
                         Overview

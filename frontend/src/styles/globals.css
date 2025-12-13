@@ -3,3 +3,14 @@
 @tailwind utilities;
 
 html,body,#root { height: 100%; }
+
+.custom-menu .ant-menu-item-selected {
+    background-color: black !important; /* لون الخلفية */
+    color: white !important;            /* لون النص */
+}
+
+/* عند hover على العنصر النشط */
+.custom-menu .ant-menu-item-selected:hover {
+    background-color: #333 !important;  /* يمكنك تغييره للون غامق آخر */
+    color: white !important;
+}
