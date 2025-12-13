@@ -24,9 +24,9 @@ createRoot(document.getElementById("root")).render(
     <BrowserRouter>
       <Routes>
         <Route path="/login" element={<Login />} />
+            <Route path="/" element={<PatientDashboard />} />
         <Route element={<ProtectedRoute />}>
           <Route element={<PatientRoute />}>
-            <Route path="/" element={<PatientDashboard />} />
             <Route path="/patient" element={<PatientDashboard />} />
             <Route path="/patient/appointments" element={<PatientAppointments />} />
             <Route path="/patient/doctors" element={<PatientDoctors />} />
