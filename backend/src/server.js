@@ -4,5 +4,3 @@ import { PORT } from "./config/env.js";
 
 connectDB();
 //app.listen(PORT, ()=> console.log(`Server running on ${PORT}`));
-
-export default app;
