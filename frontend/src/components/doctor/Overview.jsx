@@ -7,8 +7,11 @@ import {
     FieldTimeOutlined,
     CreditCardOutlined,
     FileTextOutlined,
-    AppstoreOutlined
+    AppstoreOutlined,
+    SearchOutlined,
 } from "@ant-design/icons";
+import ProfileDropdown from "./Profile";
+import Statistics from "./Statistics";
 
 const { Sider, Content, Header } = Layout;
 
@@ -25,6 +28,8 @@ function Overview() {
                 collapsed={collapsed}
                 style={{ background: "white" }}
                 onCollapse={(value) => setCollapsed(value)}
+                trigger={null}
+                breakpoint="md"
             >
                 <div
                     style={{
@@ -45,6 +50,7 @@ function Overview() {
                         }}
                     />
                 </div>
+
                 <Menu
                     className="custom-menu"
                     theme="light"
@@ -81,8 +87,24 @@ function Overview() {
 
             {/* Page Content */}
             <Layout>
-                <Content style={{ background: "", padding: 0 }}>
-                    input
+                <Content style={{ padding: 0 }}>
+                    <div className="flex justify-between items-center px-4 py-2">
+                        <div className="relative flex-1 max-w-md">
+                            <SearchOutlined className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 text-lg cursor-pointer" />
+                            <input
+                                type="text"
+                                placeholder="Search Appointment, Patients or etc"
+                                className="pl-10 pr-3 py-2 rounded-md outline-none bg-gray-100 w-full"
+                            />
+                        </div>
+                        <div className="ml-4">
+                            <ProfileDropdown />
+                        </div>
+                    </div>
+                </Content>
+
+                <Content style={{ margin: "40px" }}>
+                    <Statistics />
                 </Content>
                 <Content style={{ margin: "16px" }}>
                     <h2>Main content goes here!</h2>
