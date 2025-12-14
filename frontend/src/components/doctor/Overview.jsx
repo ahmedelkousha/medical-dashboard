@@ -88,19 +88,34 @@ function Overview() {
             {/* Page Content */}
             <Layout>
                 <Content style={{ padding: 0 }}>
-                    <div className="flex justify-between items-center px-4 py-2">
-                        <div className="relative flex-1 max-w-md">
-                            <SearchOutlined className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 text-lg cursor-pointer" />
+                    <div className="flex items-center justify-between px-4 py-2 gap-2">
+
+                        {/* Search */}
+                        <div className="relative max-w-sm min-w-[140px] flex-1">
+                            <SearchOutlined
+                                className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-base"
+                            />
                             <input
                                 type="text"
-                                placeholder="Search Appointment, Patients or etc"
-                                className="pl-10 pr-3 py-2 rounded-md outline-none bg-gray-100 w-full"
+                                placeholder="Search Appointment..."
+                                className="
+                                    w-full
+                                    pl-9 pr-2 py-2
+                                    rounded-md
+                                    bg-gray-100
+                                    text-sm
+                                    "
                             />
                         </div>
-                        <div className="ml-4">
+
+                        {/* Profile */}
+                        <div className="shrink-0">
                             <ProfileDropdown />
                         </div>
+
                     </div>
+
+
                 </Content>
 
                 <Content style={{ margin: "40px" }}>
